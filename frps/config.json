@@ -1,0 +1,30 @@
+{
+  "name": "frps",
+  "version": "1.0.0",
+  "slug": "frps",
+  "description": "Reverse proxy for Home Assistant",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "url": "https://github.com/visualage/ha-addons/tree/master/frps",
+  "startup": "services",
+  "boot": "auto",
+  "options": {
+    "frp_server": "",
+    "frp_server_port": 7000,
+    "frp_token": "",
+    "local_host": "homeassistant",
+    "local_port": 8123,
+    "tunnel_type": "tcp",
+    "http_domain": ""
+  },
+  "schema": {
+    "frp_server": "str",
+    "frp_server_port": "port",
+    "frp_token": "str",
+    "local_host": "str",
+    "local_port": "port",
+    "tunnel_type": "list(tcp|http)",
+    "http_domain": "str?",
+    "http_subdomain_host": "str?",
+    "tcp_remote_port": "port?"
+  }
+}
